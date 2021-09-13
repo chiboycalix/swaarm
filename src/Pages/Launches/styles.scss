@@ -1,0 +1,53 @@
+.launches__wrapper{
+  padding: 0 10rem;
+
+  .back__section{
+    cursor: pointer;
+  }
+  .search__section{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    .search__input{
+      flex-basis: 90%;
+    }
+    .search__button{
+      flex: 1;
+    }
+  }
+  .missions__wrapper{
+    width: 100%;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4rem;
+    grid-row-gap: 10rem;
+  }
+  .pagination__wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .missions__count{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+.rc-pagination{
+
+  li{
+    list-style: none;
+    cursor: pointer;
+    margin-right: 2rem;
+    border: 1px solid white;
+    padding: .2rem 1rem;
+  }
+  li.rc-pagination-item-active {
+    background-color:orange;
+    border: none;
+  }
+}
+

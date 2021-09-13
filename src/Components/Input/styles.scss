@@ -1,0 +1,33 @@
+.input__wrapper{
+  label{
+    display: block;
+  }
+  input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    padding: .5rem 0;
+    color: #fff;
+
+    &::placeholder {
+      opacity: 1;
+      background-color: transparent;
+    }
+    &::-ms-input-placeholder {
+      color: red;
+    }
+
+    &::-ms-input-placeholder {
+      color: red;
+    }
+  }
+}
+
+
+
+
+
+
+

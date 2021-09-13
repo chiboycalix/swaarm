@@ -1,0 +1,87 @@
+/** @format */
+
+.mission__wrapper {
+  width: 100%;
+
+  .mission__details {
+    .mission__details-header {
+      .mission__details-overview {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+          flex-basis: 90%;
+        }
+      }
+    }
+
+    .rows {
+      .mission__details-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #fff;
+        .value {
+          color: #868686;
+          a {
+            text-decoration: none;
+            color: orange;
+            cursor: pointer;
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * modal content
+ */
+
+.modal__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .launch__details {
+    width: 100%;
+    .top__wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      .video__section {
+        flex-basis: 50%;
+      }
+      .text__section {
+        flex: 1;
+        .rows {
+          .mission__details-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #fff;
+
+            .value {
+              color: #868686;
+
+              a {
+                text-decoration: none;
+                color: orange;
+                cursor: pointer;
+
+                &:hover {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

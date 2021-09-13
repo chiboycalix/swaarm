@@ -1,0 +1,239 @@
+.home__wrapper{
+  width: 100%;
+  padding: 0 10rem;
+
+  .hero__wrapper {
+      width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+      .hero__left-section {
+        flex-basis: 40%;
+
+        h1{
+          width: 70%;
+          line-height: 50px;
+          color: orange;
+        }
+
+        p{
+          line-height: 35px;
+        }
+
+        .box__wrapper {
+          flex-basis: 30%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-top: 5rem;
+          .box {
+            width: 250px;
+            height: 250px;
+            border: 1px solid #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+              background-color: #fff;
+              color: #000;
+            }
+          }
+        }
+      }
+
+      .hero__right-section {
+        .space__dragon-image {
+          width: 80%;
+        }
+      }
+  }
+}
+
+/**
+ * @media (max-width: 1440px)
+ */
+@media (max-width: 1440px) {
+  .home__wrapper {
+    padding: 0 10rem;
+
+    .hero__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .hero__left-section {
+        flex-basis: 60%;
+
+        h1 {
+          width: 70%;
+          line-height: 50px;
+          color: orange;
+        }
+
+        p {
+          line-height: 35px;
+        }
+
+        .box__wrapper {
+          flex-basis: 30%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-top: 5rem;
+
+          .box {
+            width: 250px;
+            height: 250px;
+            border: 1px solid #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+              background-color: #fff;
+              color: #000;
+            }
+          }
+        }
+      }
+
+      .hero__right-section {
+        .space__dragon-image {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * @media (max-width: 1280px)
+ */
+@media (max-width: 1280px) {
+  .home__wrapper {
+    padding: 0 10rem;
+
+    .hero__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .hero__left-section {
+        flex-basis: 70%;
+
+        h1 {
+          width: 70%;
+          line-height: 50px;
+          color: orange;
+        }
+
+        p {
+          line-height: 35px;
+        }
+
+        .box__wrapper {
+          flex-basis: 20%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-top: 5rem;
+
+          .box {
+            width: 200px;
+            height: 150px;
+            border: 1px solid #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+              background-color: #fff;
+              color: #000;
+            }
+          }
+        }
+      }
+
+      .hero__right-section {
+        .space__dragon-image {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * @media (max-width: 1024px)
+ */
+@media (max-width: 1024px) {
+  .home__wrapper {
+    padding: 0 10rem;
+
+    .hero__wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+
+      .hero__left-section {
+        flex-basis: 100%;
+
+        h1 {
+          width: 70%;
+          line-height: 50px;
+          color: orange;
+        }
+
+        p {
+          line-height: 35px;
+        }
+
+        .box__wrapper {
+          flex-basis: 20%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-top: 5rem;
+
+          .box {
+            width: 200px;
+            height: 150px;
+            border: 1px solid #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+              background-color: #fff;
+              color: #000;
+            }
+          }
+        }
+      }
+
+      .hero__right-section {
+        flex: 1;
+        width: 100%;
+        .space__dragon-image {
+          width: 60%;
+         
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
