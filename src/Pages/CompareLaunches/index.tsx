@@ -1,16 +1,17 @@
 /** @format */
 
-import React from 'react';
-import { useQuery } from '@apollo/client';
-import YouTube from 'react-youtube';
-import MultiSelect from '@kenshooui/react-multi-select';
-import { FETCH_LAUNCHES_PAST } from '../../Queries';
-import { Modal, Loader } from '../../Components';
-import './styles.scss';
+import React from "react";
+import { useQuery } from "@apollo/client";
+import YouTube from "react-youtube";
+import MultiSelect from "@kenshooui/react-multi-select";
+import { FETCH_LAUNCHES_PAST } from "../../Queries";
+import { Modal, Loader, Button } from "../../Components";
+import "./styles.scss";
 
 const CompareLaunches: React.FC = () => {
   const [selectedItems, setSelectedRecords]: any[] = React.useState([]);
   const [modal, setModal] = React.useState(false);
+  const [compareBtn, showCompareBtn] = React.useState(false);
 
   const { data, loading } = useQuery(FETCH_LAUNCHES_PAST, {
     variables: { limit: 50, offset: 0 },
@@ -19,12 +20,21 @@ const CompareLaunches: React.FC = () => {
   const handleChange = (selectedRecords: any) => {
     setSelectedRecords(selectedRecords);
     if (selectedRecords.length === 2) {
-      setModal(true);
+      // setModal(true);
+      showCompareBtn(true);
+    } else {
+      showCompareBtn(false);
     }
   };
+
+  const handleShowModal = () => {
+    setModal(true);
+  };
+
   const handleCloseModal = () => {
     setSelectedRecords([]);
   };
+
   const dataMap = data?.launchesPast?.map(
     (d: { mission_name: string }, idx: number) => {
       return {
@@ -37,6 +47,14 @@ const CompareLaunches: React.FC = () => {
 
   return (
     <div className="compare__wrapper">
+      <div className="compareBtn__wrapper">
+        {compareBtn ? (
+          <Button type="secondary" onClick={handleShowModal}>
+            Compare
+          </Button>
+        ) : null}
+      </div>
+
       {loading ? (
         <Loader />
       ) : (
@@ -52,14 +70,15 @@ const CompareLaunches: React.FC = () => {
       <Modal
         handleCloseModal={handleCloseModal}
         modal={modal}
-        setModal={setModal}>
+        setModal={setModal}
+      >
         <div className="modal__content">
           <div className="first__selected-mission">
             <div className="top__wrapper">
               <div className="video__section">
                 <YouTube
-                  videoId={selectedItems[0]?.links.video_link.split('/')[3]}
-                  opts={{ height: '370', width: '550' }}
+                  videoId={selectedItems[0]?.links.video_link.split("/")[3]}
+                  opts={{ height: "370", width: "550" }}
                 />
               </div>
               <div className="text__section">
@@ -100,7 +119,8 @@ const CompareLaunches: React.FC = () => {
                         <a
                           href={selectedItems[0]?.links?.article_link}
                           target="_blank"
-                          rel="noreferrer">
+                          rel="noreferrer"
+                        >
                           link
                         </a>
                       ) : (
@@ -115,8 +135,8 @@ const CompareLaunches: React.FC = () => {
               <div className="top__wrapper">
                 <div className="video__section">
                   <YouTube
-                    videoId={selectedItems[1]?.links.video_link.split('/')[3]}
-                    opts={{ height: '370', width: '550' }}
+                    videoId={selectedItems[1]?.links.video_link.split("/")[3]}
+                    opts={{ height: "370", width: "550" }}
                   />
                 </div>
                 <div className="text__section">
@@ -156,7 +176,8 @@ const CompareLaunches: React.FC = () => {
                           <a
                             href={selectedItems[1]?.links?.article_link}
                             target="_blank"
-                            rel="noreferrer">
+                            rel="noreferrer"
+                          >
                             link
                           </a>
                         ) : (

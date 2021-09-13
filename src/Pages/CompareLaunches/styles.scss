@@ -1,8 +1,11 @@
 /** @format */
 
 .compare__wrapper {
-  width: 100%;
   padding: 0 10rem;
+  .compareBtn__wrapper {
+    margin-bottom: 2rem;
+    display: flex;
+  }
 
   .first__selected-mission {
     width: 100%;
